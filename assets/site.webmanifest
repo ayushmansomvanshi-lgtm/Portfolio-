@@ -1,0 +1,12 @@
+{
+  "name": "Ayushman — Portfolio",
+  "short_name": "Ayushman",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090b0a",
+  "theme_color": "#d9ff59",
+  "icons": [
+    { "src": "/assets/favicon-32x32.svg", "sizes": "32x32", "type": "image/svg+xml" },
+    { "src": "/assets/apple-touch-icon.svg", "sizes": "180x180", "type": "image/svg+xml" }
+  ]
+}
