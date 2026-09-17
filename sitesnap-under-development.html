@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Snapshot — Under Development</title>
+  <style>
+    :root {
+      --bg: #0a0d0d;
+      --panel: rgba(18, 22, 22, 0.9);
+      --line: rgba(255,255,255,0.12);
+      --text: #eaf5ed;
+      --muted: #a8b7ac;
+      --accent: #d9ff59;
+      --shadow: rgba(217,255,89,0.25);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      font-family: Inter, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(217,255,89,0.14), transparent 30%),
+        linear-gradient(180deg, #080a0a, #0d1010 38%, #090b0a);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      padding: 32px;
+    }
+
+    .card {
+      width: min(700px, 100%);
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.02), 0 30px 80px rgba(0,0,0,0.4);
+      border-radius: 22px;
+      padding: 40px 32px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(217,255,89,0.08);
+      border: 1px solid rgba(217,255,89,0.2);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 16px var(--shadow);
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 0.96;
+      margin: 24px 0 16px;
+      letter-spacing: -0.06em;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin: 0 0 28px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-weight: 700;
+      transition: 180ms ease;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #0c110d;
+      box-shadow: 0 12px 28px rgba(217,255,89,0.22);
+    }
+
+    .btn.secondary {
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--text);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="eyebrow"><span class="dot"></span> Site Snapshot</div>
+    <h1>Under development</h1>
+    <p>
+      This project is currently being built. The final version will include representative page capture,
+      multi-device screenshots, and a cleaner visual QA workflow once the build is ready.
+    </p>
+    <div class="actions">
+      <a class="btn primary" href="./index.html">Back to portfolio</a>
+      <a class="btn secondary" href="https://github.com/ayushmansomvanshi-lgtm" target="_blank" rel="noreferrer">View GitHub</a>
+    </div>
+  </main>
+</body>
+</html>
