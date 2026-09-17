@@ -17,11 +17,16 @@ if (window.gsap && !reduceMotion) {
 if (window.gsap && window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
 
 let lenis = null;
-if (window.Lenis && window.gsap && !reduceMotion) {
-  lenis = new Lenis({ duration: 1.05, smoothWheel: true });
+if (window.Lenis && !reduceMotion) {
+  lenis = new Lenis({ duration: 1.05, smoothWheel: true, smoothTouch: true });
   lenis.on('scroll', () => window.ScrollTrigger?.update());
-  gsap.ticker.add(t => lenis.raf(t * 1000));
-  gsap.ticker.lagSmoothing(0);
+
+  if (window.gsap) {
+    gsap.ticker.add(t => lenis.raf(t * 1000));
+    gsap.ticker.lagSmoothing(0);
+  } else {
+    (function raf(time){ lenis.raf(time); requestAnimationFrame(raf); })(0);
+  }
 }
 
 function scrollToTarget(target, immediate = false) {
