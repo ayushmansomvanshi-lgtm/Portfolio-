@@ -33,6 +33,6 @@ Then visit `http://localhost:8080`.
 
 ## Before publishing
 
-Replace the placeholder email and LinkedIn URL in `index.html` with your real contact details.
+Contact: somvanshiayushmaan@gmail.com — LinkedIn: https://linkedin.com/in/ayushmanso
 # portfolio
 # Portfolio-
